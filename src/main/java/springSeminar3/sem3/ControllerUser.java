@@ -18,8 +18,8 @@ public class ControllerUser {
     public List<User> getAllEmployees() {
         return serviceUser.getAllEmployees();
     }
-    @GetMapping("/{name}")
-    public List<User> getEmployeeByName(String name)throws IOException {
+    @GetMapping("/findbyname/{name}")
+    public List<User> getEmployeeByName(@PathVariable String name) {
         return serviceUser.getEmployeeByName(name);
 
     }
